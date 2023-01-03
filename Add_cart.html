@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Your Cart</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/tooplate-main.css">
+    <link rel="stylesheet" href="css/owl.css">
+    <link rel="stylesheet" href="css/flex-slider.css">
+    <style>
+        .feedback {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  input[type=text],input[type=number], .select123, textarea {
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  .submit_button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  label {
+    display: inline-block;
+    width: 150px;
+}
+    </style>
+    <script>
+      function validate(){
+        if($("#full").val() == '')
+        {
+          alert("Please Enter Your Full Name");//Alert box with particular field
+        }
+      if($("#mail").val() == '')
+        {
+          alert("Email must be filled out");//Alert box with particular field
+        }
+      if($("#address").val() == '')
+        {
+          alert("Please Enter Your Address");//Alert box with particular field
+        }
+        if($("#c_number").val() == '')
+        {
+          alert("Please Enter Your Card Number");//Alert box with particular field
+        }
+      if($("#cvv").val() == '')
+        {
+          alert("Please Enter Card's CVV");//Alert box with particular field
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="images/logo4.jpg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1  style="text-align: center;color: #1e1e1e;">Item Added In Your Cart </h1><br><br>
+  <!-- Page Content -->
+  <div class="feedback">
+    <div class="feedbackform">
+    <center>
+     <form>
+     <label for="fname">Full Name</label>
+     <input size="20" maxlength="20" type="text" id="full" placeholder="Your Full Name.." required><br>
+ 
+     <label for="lname">Email</label>
+     <input size="30" maxlength="30" type="text" id="mail" placeholder="Email.." required><br>
+
+     <label for="lname">Address</label>
+     <input size="30" maxlength="30" type="text" id="address" placeholder="Address.." required><br>
+ 
+     <label for="country">City</label>
+     <select class="select123" id="city" name="country">
+       <option value="australia">Toronto</option>
+       <option value="canada">Bramton</option>
+       <option value="usa">Vancouver</option>
+       <option value="australia">Ottawa</option>
+       <option value="canada">Winnipeg</option>
+       <option value="usa">Quebec</option>
+       <option value="usa">Etobicoke</option>
+     </select><br>
+
+     <label for="fname">Card Number</label>
+     <input size="20" maxlength="20" type="number" id="c_number" placeholder="Your Card Number.." required><br>
+ 
+     <label for="country">Exp Month</label>
+     <select class="select123" id="country" name="country">
+       <option value="australia" hidden>Select Exp Month</option>
+       <option value="australia">January</option>
+       <option value="canada">February</option>
+       <option value="usa">March</option>
+       <option value="australia">April</option>
+       <option value="canada">May</option>
+       <option value="usa">June</option>
+       <option value="usa">July</option>
+       <option value="australia">August</option>
+       <option value="canada">September</option>
+       <option value="usa">October</option>
+       <option value="australia">November</option>
+       <option value="canada">December</option>
+     </select><br>
+
+     <label for="fname">CVV</label>
+     <input size="20" maxlength="20" type="number" id="cvv" placeholder="Enter Your CVV.." required><br><br>
+ 
+     <input class="submit_button" type="submit" onclick="validate()" value="Buy Now">
+     <br><br>
+   </form>
+ </center>
+ </div>
+ </div><br><br>
+
+
+  <!-- Footer Starts Here -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="logo">
+            <img src="images/logo4.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="footer-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">How It Works ?</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="social-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Ends Here -->
+
+
+  <!-- Sub Footer Starts Here -->
+  <div class="sub-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright-text">
+            <p>Copyright &copy; 2022 Skin care.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sub Footer Ends Here -->
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="jquery/jquery.min.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Additional Scripts -->
+  <script src="js/custom.js"></script>
+  <script src="js/owl.js"></script>
+  <script src="js/isotope.js"></script>
+  <script src="js/flex-slider.js"></script>
+
+
+  <script language="text/Javascript">
+    cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+    function clearField(t) {                   //declaring the array outside of the
+      if (!cleared[t.id]) {                      // function makes it static and global
+        cleared[t.id] = 1;  // you could use true and false, but that's more typing
+        t.value = '';         // with more chance of typos
+        t.style.color = '#fff';
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
